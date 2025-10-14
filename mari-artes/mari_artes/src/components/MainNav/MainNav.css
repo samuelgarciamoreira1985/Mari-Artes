@@ -1,0 +1,29 @@
+.container-main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #b0afad6e;
+    height: 6vh;
+    width: 100vw;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px #ffffff;
+    font-style: italic;
+    margin-top: 9px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav a:hover {
+    color: rgba(0, 0, 0, 0.678);
+}
