@@ -4,3 +4,10 @@ body {
   font-weight: 200;
   background-color: white;
 }
+
+.top-main {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+

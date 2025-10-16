@@ -10,8 +10,10 @@ function App() {
   return (
 
     <div className='App'>
-        <MainHeader/>
-        <MainNav/>
+        <div className='top-main'>
+          <MainHeader/>
+          <MainNav/>
+        </div>
         <Outlet/>
     </div>
 
