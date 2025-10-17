@@ -33,6 +33,12 @@
     width: 100vw;
 }
 
+.frame-mari video {
+    background-color: #fdffff;
+    width: 50vw;
+    height: 40vh;
+}
+
 .frame-mari-text {
     display: flex;
     flex-direction: column;
@@ -41,24 +47,88 @@
     margin-bottom: 20px;
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Animação para o cursor piscando */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
 .frame-mari-text h3 {
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+    text-shadow: .5px .5px 1px black;
+    font-style: italic;
+    overflow: hidden;
+    border-right: .15em solid rgb(224, 224, 223);
+    white-space: nowrap;
+    width: 0;
+    animation: typing .2s steps(200, end) forwards,
+               blink-caret .75s step-end infinite;
 }
 
 .frame-mari-text p {
     text-align: center;
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fdfdfd;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #00f,
+    0 0 20px #00f,
+    0 0 30px #00f;
+    animation: flicker 1.5s infinite alternate; /* Aplica a animação */
+}
+
+@keyframes flicker {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #00f,
+      0 0 20px #00f,
+      0 0 30px #00f;
+  }
+  50% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #00f,
+      0 0 20px #00f;
+  }
+}
+
+.icon-video {
+    font-size: 1rem;
+}
+
+.videos {
+    display: flex;
+    flex-direction: row;
+}
+
+.video-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-product span {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.2rem;
     color: #000;
+    text-shadow: .5px .5px 2px white;
 }
 
 .top5-week {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin-top: 30px;
     background-color: rgba(5, 168, 168, 0.801);
 }
 
@@ -85,10 +155,27 @@
 .top5-week-products {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 100px;
 }
 
 .img-top5 {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+
+.top5-product {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+}
+
+.top5-product span {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: .3px .3px 3px black;
 }
