@@ -10,7 +10,7 @@ const Bags = () => {
 
       <div>
           <Footer/>
-        </div>
+      </div>
     </div>
 
   )

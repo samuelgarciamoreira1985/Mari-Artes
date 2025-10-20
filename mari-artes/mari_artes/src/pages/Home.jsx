@@ -7,9 +7,9 @@ import "./Home.css"
 import video1mari from "../assets/videos/vídeo-mari-one.mp4"
 import video2mari from "../assets/videos/vídeo-mari-two.mp4"
 //IMAGENS
-import slideMain from "../assets/slide-atual.png"
-import slide2 from "../assets/slide2.png"
-import slide3 from "../assets/slide3.png"
+import main_banner1 from "../assets/main-banner1.png"
+import main_banner2 from "../assets/main-banner2.png"
+import main_banner3 from "../assets/main-banner3.png"
 import bag_top5 from "../assets/bag-top5.png"
 import bracelet_top5 from "../assets/bracelet-top5.png"
 import necklaces_top5 from "../assets/necklaces-top5.png"
@@ -26,9 +26,9 @@ const Home = () => {
 
       <div className="container-banner-home">
         <div className="slides-banner-home">
-            <img src={slideMain} alt="slide1" className="slide-atual"/>
-            <img src={slide2} alt="slide2" className="slide-next"/>
-            <img src={slide3} alt="slide3" className="slide-next"/>
+            <img src={main_banner1} alt="slide1" className="slide-next"/>
+            <img src={main_banner3} alt="slide2" className="slide-next"/>
+            <img src={main_banner2} alt="slide3" className="slide-next"/>
         </div>
       </div>
 
