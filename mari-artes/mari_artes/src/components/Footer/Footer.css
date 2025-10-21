@@ -1,7 +1,12 @@
 .container-footer {
     display: flex;
+    flex-direction: column;
+}
+
+.sub-container-footer {
+    display: flex;
     flex-direction: row;
-    height: 55vh;
+    height: 50vh;
     width: 100vw;
     background-color: #E5E8E8;
     justify-content: space-around;
@@ -9,6 +14,9 @@
 
 h3 {
     margin-top: 30px;
+    color: #12B2BF;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 .about-mari-footer {
@@ -17,12 +25,62 @@ h3 {
     width: 20vw;
 }
 
+.about-mari-footer p {
+    color: #12B2BF;
+    text-align: justify;
+    margin-top: 25px;
+}
+
 .info-footer {
     display: flex;
     flex-direction: column;
 }
 
+.link-info-footer {
+    color: #12B2BF;
+    text-align: justify;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.link-info-footer:hover {
+    color: #0e0f0f62;
+}
+
 .contact-footer {
     display: flex;
     flex-direction: column;
+}
+
+.contact-footer span {
+    color: #12B2BF;
+    text-align: justify;
+    margin-top: 25px;
+}
+
+.link-contact-footer {
+    color: #12B2BF;
+    text-align: justify;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.link-contact-footer:hover {
+    color: #0e0f0f62;
+}
+
+.footer-security {
+    display: flex;
+    flex-direction: row;
+    background-color: #12B2BF;
+    width: 100vw;
+    height: 13vh;
+}
+
+.footer-security p {
+    color: white;
+    font-size: .9rem;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 10px;
 }

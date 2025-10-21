@@ -1,5 +1,11 @@
+//REACT
+import { Link } from "react-router-dom"
 //CSS
 import "./Footer.css"
+//ÍCONES
+import { BsWhatsapp } from "react-icons/bs";
+import { FaPhoneFlip } from "react-icons/fa6";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
 
@@ -7,24 +13,31 @@ const Footer = () => {
 
     <div className="container-footer">
         
-        <div className="about-mari-footer">
-            <h3>Mari Bonecas & Arte</h3>
-            <p>Em nosso estoque você encontrará uma grande variedade de produtos de categoria artesanal desde bolsas, colares, pulseiras, chaveiros e porta-retratos. Com nosso diferêncial voltado na produção de bolsas utilizando fio náutico, estamos a todo vapor trabalhando em peças exclusivas com muita dedicação e carinho para melhor atender as suas necessidades, pois a sua satisfação é sempre a nossa missão.</p>
+        <div className="sub-container-footer">
+          <div className="about-mari-footer">
+              <h3>Mari Bonecas & Arte</h3>
+              <p>Em nosso estoque você encontrará uma grande variedade de produtos de categoria artesanal desde bolsas, colares, pulseiras, chaveiros e porta-retratos. Com nosso diferêncial voltado na produção de bolsas utilizando fio náutico, estamos a todo vapor trabalhando em peças exclusivas com muita dedicação e carinho para melhor atender as suas necessidades, pois a sua satisfação é sempre a nossa missão.</p>
+          </div>
+          <div className="info-footer">
+              <h3>Informações</h3>
+              <Link to="#" className="link-info-footer">Quem somos</Link>
+              <Link to="#" className="link-info-footer">Como comprar</Link>
+              <Link to="#" className="link-info-footer">As mais vendidas</Link>
+              <Link to="#" className="link-info-footer">Contato</Link>
+          </div>
+          <div className="contact-footer">
+              <h3>Entre em contato</h3>
+          
+              <span><BsWhatsapp style={{marginRight:"10px"}}/>5514988183530</span>
+              <span> <FaPhoneFlip style={{marginRight:"10px"}}/>(14) 98818-3530 </span>
+               <Link to="#" className="link-contact-footer"><AiOutlineMail  style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
+              <span>Rua Francisco Raimundo de Carvalho n° 5-62</span>
+              <span style={{marginTop:"3px"}}>17065-209 - Bauru, SP </span>
+          </div>
         </div>
 
-        <div className="info-footer">
-            <h3>Informações</h3>
-            <a href="#">Quem somos</a>
-            <a href="#">Como comprar</a>
-            <a href="#">Contato</a>
-        </div>
-
-        <div className="contact-footer">
-            <h3>Entre em contato</h3>
-            <a href="">watszap</a>
-            <a href="">telefone</a>
-            <a href="">email</a>
-            <a href="">endereço</a>
+        <div className="footer-security">
+              <p>Copyright Mari Bonecas & Arte | Produtos de Artesanato - 2025. Todos os direitos reservados.</p>
         </div>
 
     </div>

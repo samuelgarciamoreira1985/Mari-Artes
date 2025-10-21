@@ -1,6 +1,8 @@
 //REACT
 import React from 'react'
 import Footer from '../components/Footer/Footer.jsx' 
+//JSON
+import data_General from "../dataGeneral.json"
 //CSS
 import "./Home.css"
 //VÍDEOS
@@ -32,10 +34,40 @@ const Home = () => {
         </div>
       </div>
 
+      <div className='gallery-products'>
+
+        <h3>Galeria Artesanal 2025</h3>
+
+        <div className='container-gallery'>
+          <ul>
+            { data_General && data_General?.map( itemProd => (
+              <li key={itemProd.id_Product}>
+                <img src={itemProd.photo_Product} alt="imagem do produto" />
+                <p style={{marginTop:"20px"}}>{itemProd.description_Product}</p>
+                <p style={{marginTop:"20px",color:"#12B2BF",fontWeight:"600",fontSize:"1.5rem",textShadow:".2px .2px .5px black"}}>R$ {itemProd.value_Product}</p>
+                
+                <div className='add-remove-cart'>
+                  <button type='button'>+</button>
+                  <span>1</span>
+                  <button type='button'>-</button>
+                </div>
+
+                <div className='btn-finally-galery'>
+                  <button type='button'>Adicionar ao carrinho</button>
+                  <button type='button'>Detalhes</button>
+                </div>
+
+              </li>
+            )) }
+          </ul>
+        </div>
+
+      </div>
+
       <div className='frame-mari'>
         <div className='frame-mari-text'>
           <h3>Confira aqui!!!</h3>
-          <p>Confira alguns de nossos produtos</p>
+          <p>Confira alguns de nossos produtos em destaque</p>
         </div>
           <div className='videos'>
             <div className='video-product'>

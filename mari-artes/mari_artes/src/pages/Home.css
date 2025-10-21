@@ -8,7 +8,7 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    height: 400px;
+    height: 470px;
 }
 
 .slides-banner-home {
@@ -91,6 +91,8 @@
 }
 
 .frame-mari-text h3 {
+    color: #12B2BF;
+    text-shadow: 2px 2px 4px black;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
@@ -210,4 +212,111 @@
     font-size: 1.1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-shadow: .3px .3px 3px black;
+}
+
+/*------------------GALERIA DE PRODUTOS------------------*/
+.gallery-products {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-products h3 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .2px .2px .5px black;
+}
+
+.container-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.container-gallery ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.gallery-products ul li {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #0a0a0a2d, #b6aeae2d);
+    width: 280px;
+    height: 580px;
+    border-radius: 12px;
+}
+
+.gallery-products ul li img {
+    width: 220px;
+    height: 300px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.gallery-products ul li p {
+    color: #000;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.add-remove-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.add-remove-cart button {
+    width: 50px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: none;
+    background-color: #12B2BF;
+    border-radius: 10px;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.add-remove-cart button:hover {
+    background-color: #12b1bf7e;
+}
+
+.btn-finally-galery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    align-self: center;
+}
+
+.btn-finally-galery button {
+    width: 200px;
+    height: 30px;
+    border-radius: 12px;
+    background-color: #12B2BF;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    text-shadow: .2px .2px 2px black;
+    cursor: pointer;
+}
+
+.btn-finally-galery button:hover {
+    background-color: #12b1bf7e;
 }
