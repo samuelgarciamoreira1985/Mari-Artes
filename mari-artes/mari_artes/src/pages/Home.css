@@ -241,9 +241,11 @@
 .container-gallery ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 100vw;
+    margin-left: 11vw;
+    gap: 30px;
 }
 
 .gallery-products ul li {

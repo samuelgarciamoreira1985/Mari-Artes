@@ -14,7 +14,7 @@
 {
     "id_Product": 3,
     "photo_Product": "/products-sale/bag3.png",
-    "description_Product": "Bolsa de tela marrom 19cm x 12cm (6cm profundidade)",
+    "description_Product": "Bolsa de tela marrom 23cm x 10cm (6cm profundidade)",
     "value_Product": 22.99
 },
 {
@@ -34,5 +34,11 @@
     "photo_Product": "/products-sale/bag6.png",
     "description_Product": "Bolsa de tela branca 19cm x 12cm (6cm profundidade)",
     "value_Product": 25.99
+},
+{
+    "id_Product": 7,
+    "photo_Product": "/products-sale/bag7.png",
+    "description_Product": "Bolsa de tela preto fosco 19cm x 12cm (6cm profundidade)",
+    "value_Product": 20.59
 }
 ]

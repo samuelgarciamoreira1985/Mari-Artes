@@ -11,6 +11,7 @@ import Necklaces from './pages/Necklaces.jsx'
 import Bracelets from './pages/Bracelets.jsx'
 import Keychains from './pages/Keychains.jsx'
 import PhotoFrame from './pages/PhotoFrame.jsx'
+import About from './pages/About.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const routes = createBrowserRouter([
       {
         path: "/photoframe", // PÁGINA DE PORTA-RETRATOS
         element: <PhotoFrame/>
+      },
+      {
+        path: "/about", // PÁGINA INFORMATIVA - QUEM SOMOS NÓS
+        element: <About/>
       }
     ]
   }

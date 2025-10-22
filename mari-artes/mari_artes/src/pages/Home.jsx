@@ -2,7 +2,7 @@
 import React from 'react'
 import Footer from '../components/Footer/Footer.jsx' 
 //JSON
-import data_General from "../dataGeneral.json"
+import data_General from "../data/dataGeneral.json"
 //CSS
 import "./Home.css"
 //VÍDEOS
@@ -94,8 +94,8 @@ const Home = () => {
           <div className='top5-week-products'>
             <div className='top5-product'>
               <img src={bag_top5} alt="produto1 - top 5" className='img-top5'/>
-              <span>Bolsa escamada vermelha</span>
-              <span style={{color:"red",textShadow:".3px .3px 1px black",fontSize:"1.3rem"}}>R$ 49,90</span>
+              <span>Bolsa de tela branca 19cm x 12cm (6cm profundidade)</span>
+              <span style={{color:"red",textShadow:".3px .3px 1px black",fontSize:"1.3rem"}}>R$ 25.99</span>
             </div>
             <div className='top5-product'>
               <img src={necklaces_top5} alt="produto2 - top 5" className='img-top5'/>

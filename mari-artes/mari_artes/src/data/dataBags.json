@@ -1,0 +1,44 @@
+[
+{
+    "id_Bag": 1,
+    "photo_Bag": "/products-sale/bag1.png",
+    "description_Bag": "Bolsa de tela cinza chumbo 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 20.99
+},
+{
+    "id_Bag": 2,
+    "photo_Bag": "/products-sale/bag2.png",
+    "description_Bag": "Bolsa de tela preto carvão 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 24.99
+},
+{
+    "id_Bag": 3,
+    "photo_Bag": "/products-sale/bag3.png",
+    "description_Bag": "Bolsa de tela marrom 23cm x 10cm (6cm profundidade)",
+    "value_Bag": 22.99
+},
+{
+    "id_Product": 4,
+    "photo_Bag": "/products-sale/bag4.png",
+    "description_Bag": "Bolsa de tela preta 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 25.99
+},
+{
+    "id_Bag": 5,
+    "photo_Bag": "/products-sale/bag5.png",
+    "description_Product": "Bolsa de tela laranja 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 30.99
+},
+{
+    "id_Bag": 6,
+    "photo_Bag": "/products-sale/bag6.png",
+    "description_Bag": "Bolsa de tela branca 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 25.99
+},
+{
+    "id_Bag": 7,
+    "photo_Bag": "/products-sale/bag7.png",
+    "description_Bag": "Bolsa de tela preto fosco 19cm x 12cm (6cm profundidade)",
+    "value_Bag": 20.59
+}
+]
