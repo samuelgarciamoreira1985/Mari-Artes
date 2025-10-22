@@ -28,10 +28,129 @@
     width: 800px;
     height: 300px;
     margin-top: 20px;
+    align-self: center;
+}
+
+.p-info-about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 60vw;
+    color: black;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 30px;
+    text-indent: 60px;
+    margin-left: 100px;
+}
+
+.about-initial h4 {
+    margin-top: 30px;
+    margin-left: 110px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: .5px .5px 2px #fffefe;
+}
+
+.p-address-about {
+    margin-top: 15px;
+    margin-left: 110px;
+    color: #000000;
+}
+
+.about-initial h5 {
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .5px .5px 2px #fffefe;
 }
 
 /*---------------PARTE FINAL--------------*/
 
 .about-finally {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 100px;
+}
 
+.about-mari {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin-left: 350px;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.about-mari img {
+    width: 350px;
+    height: 350px;
+}
+
+.about-mari-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-mari-section h3 {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: .2px .2px .5px black;
+}
+
+.about-mari-section p {
+    color: #000000;
+    font-size: 1rem;
+    text-align: justify;
+    text-indent: 40px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-samuel {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin-left: 350px;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.about-samuel img {
+    width: 350px;
+    height: 350px;
+}
+
+.about-samuel-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-samuel-section h3 {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: .2px .2px .5px black;
+}
+
+.about-samuel-section p {
+    color: #000000;
+    font-size: 1rem;
+    text-align: justify;
+    text-indent: 40px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
