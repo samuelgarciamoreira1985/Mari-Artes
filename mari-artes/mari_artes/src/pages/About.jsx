@@ -18,7 +18,7 @@ const About = () => {
             <img src={welcome} alt="" />
             <div className='p-info-about'>
                 <p>A Mari Bonecas & Arte atua no ramo de produtos de artesanato na cidade de Bauru/SP . Ela foi idealizada e realizada para atender as necessidades de nossos clientes apaixonados pela linha artesanal e que desejam ter acesso a uma variada linha de produtos de artesanato, agora expandindo o acesso para on-line podendo assim levar a linha de produtos a mais pessoas a fora.</p>
-                <p>Em nosso estoque você encontra uma grande variedade de produtos artesanais desde pulseiras,chaveiros,bolsas,etc. Com nosso diferêncial voltado para a produção de bolsas utilizando fio náutico em telas, estamos a todo vapor desenvolvendo peças exclusivas e desenhadas para melhor atender as suas necessidades e desejos. Não podemos esquecer de comentar que nossas peças são desenhadas e personalizadas seguindo o gosto de cada cliente especifico, desde o tamanho,cor,enfeites adicionais e muito mais. </p>
+                <p>Em nosso estoque você encontra uma grande variedade de produtos artesanais desde pulseiras,chaveiros,bolsas,etc. Com nosso diferêncial voltado para a produção de bolsas de crochê em tela chenille utilizando fio náutico, temos bolsas de variadas cores e pontos com detalhes em prata e dourado e completamente forrada por dentro. Assim estamos a todo vapor desenvolvendo peças exclusivas e desenhadas para melhor atender as suas necessidades e desejos. Não podemos esquecer de comentar que nossas peças são desenhadas e personalizadas seguindo o gosto de cada cliente especifico, desde o tamanho,cor,enfeites adicionais e muito mais. </p>
             </div>
             <h4>Onde estamos?</h4>
             <p className='p-address-about'>Rua Francisco Raimundo de Carvalho n° 5-62 - Nova Esperança - Bauru - SP, 17065-209</p>
@@ -31,7 +31,7 @@ const About = () => {
                 <img src={about_mari} alt="foto da Marineusa" />
                 <div className='about-mari-section'>
                     <h3>Marineusa Garcia Correa Moreira</h3>
-                    <p>Ex-Funcionária pública da prefeitura de Bauru, profissional da educação, formada em Recursos Humanos e apaixonada pelo artesanato. Atuo na área a mais de 10 anos, quando o artesanato entrou na minha vida ainda moça através do crochê, produzindo toalhas e tapetes. Aos poucos fui desenvolvendo a habilidade de produzir bonecas reborn, bolsas,brincos,chaveiros entre outras coisas. Hoje fabrico bolsas em fio náutico de tela, entre outros produtos especificos atendendo os desejos das pessoas que procuram ter um produto artesanal de qualidade.</p>
+                    <p>Ex-Funcionária pública da prefeitura de Bauru, profissional da educação, formada em Recursos Humanos e apaixonada pelo artesanato. Atuo na área a mais de 50 anos, quando o artesanato entrou na minha vida ainda criança quando eu tinha 7 anos através do crochê, produzindo toalhas, tapetes, bonecas de pano e tudo relacionado a bonecas. Aos poucos fui desenvolvendo a habilidade de produzir bonecas reborn, bolsas,brincos,chaveiros entre outras coisas. Hoje fabrico bolsas de crochê em tela chenille com fio náutico de varidas cores e pontos , entre outros produtos especificos atendendo os desejos das pessoas que procuram ter um produto artesanal de qualidade.</p>
                     <p>Convido você a conferir tudo o que temos de melhor. Vamos nessa?</p>
                 </div>
             </div>

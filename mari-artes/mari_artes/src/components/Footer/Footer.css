@@ -65,6 +65,17 @@ h3 {
     text-decoration: none;
 }
 
+.link-facebook-footer {
+    color: #12B2BF;
+    text-align: justify;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.link-facebook-footer:hover {
+    color: #0e0f0f62;
+}
+
 .link-contact-footer:hover {
     color: #0e0f0f62;
 }

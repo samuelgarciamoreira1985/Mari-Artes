@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 //CSS
 import "./Footer.css"
 //ÍCONES
-import { BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp,BsFacebook  } from "react-icons/bs";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -21,15 +21,16 @@ const Footer = () => {
           <div className="info-footer">
               <h3>Informações</h3>
               <Link to="/about" className="link-info-footer">Quem somos</Link>
-              <Link to="#" className="link-info-footer">Como comprar</Link>
+              <Link to="/guidebuy" className="link-info-footer">Como comprar</Link>
+              <Link to="#" className="link-info-footer">Perguntas Frequentes</Link>
               <Link to="#" className="link-info-footer">As mais vendidas</Link>
-              <Link to="#" className="link-info-footer">Contato</Link>
           </div>
           <div className="contact-footer">
               <h3>Entre em contato</h3>
           
               <span><BsWhatsapp style={{marginRight:"10px"}}/>5514988183530</span>
               <span> <FaPhoneFlip style={{marginRight:"10px"}}/>(14) 98818-3530 </span>
+               <Link to="#" className="link-facebook-footer"><BsFacebook   style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
                <Link to="#" className="link-contact-footer"><AiOutlineMail  style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
               <span>Rua Francisco Raimundo de Carvalho n° 5-62</span>
               <span style={{marginTop:"3px"}}>17065-209 - Bauru, SP </span>
