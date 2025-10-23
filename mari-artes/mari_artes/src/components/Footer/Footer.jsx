@@ -30,7 +30,9 @@ const Footer = () => {
           
               <span><BsWhatsapp style={{marginRight:"10px"}}/>5514988183530</span>
               <span> <FaPhoneFlip style={{marginRight:"10px"}}/>(14) 98818-3530 </span>
-               <Link to="#" className="link-facebook-footer"><BsFacebook   style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
+               <a href="https://www.facebook.com/profile.php?id=61576002713199&locale=pt_BR" className="link-facebook-footer" target="_blank">
+                 <BsFacebook   style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com
+               </a>
                <Link to="#" className="link-contact-footer"><AiOutlineMail  style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
               <span>Rua Francisco Raimundo de Carvalho n° 5-62</span>
               <span style={{marginTop:"3px"}}>17065-209 - Bauru, SP </span>

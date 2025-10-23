@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 //ÍCONES
 import { FaSearch,FaGift,FaShoppingCart   } from "react-icons/fa";
+import { RiCircleFill } from "react-icons/ri";
 //CSS
 import "./MainHeader.css"
 //IMAGENS
@@ -28,14 +29,15 @@ const MainHeader = () => {
         
         <div className="gift-cart-header">
             <div className="gift-header">
-                <button className="btn-gift">
+                <Link to="/guidebuy"><button className="btn-gift">
                     <FaGift className="icon-gift"/>
-                </button>
+                </button></Link>
                 <span className="span-gift-cart">Como comprar</span>
             </div>
             <div className="cart-header">
                 <button className="btn-cart">
-                    <FaShoppingCart  className="icon-cart"/>
+                    <FaShoppingCart  className="icon-cart"/><RiCircleFill style={{color:"red",fontSize:"1.5rem"}}/>
+                    <span className="amount-cart-home">00</span>
                 </button>
                 <span className="span-gift-cart">Meu carrinho</span>
             </div>
