@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // REACT
 import Bags from './pages/Bags.jsx'
 import Home from './pages/Home.jsx'
+import FrequentQuestions from './pages/FrequentQuestions.jsx'
 import GuideBuy from './pages/GuideBuy.jsx'
 import Necklaces from './pages/Necklaces.jsx'
 import Bracelets from './pages/Bracelets.jsx'
@@ -50,6 +51,10 @@ const routes = createBrowserRouter([
       {
         path: "/guidebuy", // PÁGINA INFORMATIVA - COMO COMPRAR
         element: <GuideBuy/>
+      },
+      {
+        path: "/frequentquestions", // PÁGINA INFORMATIVA - PERGUNTAS FREQUENTES
+        element: <FrequentQuestions/>
       }
     ]
   }

@@ -218,6 +218,7 @@
 .gallery-products {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .gallery-products h3 {
@@ -321,4 +322,71 @@
 
 .btn-finally-galery button:hover {
     background-color: #12b1bf7e;
+}
+
+/*---------------------MODAL DETALHES--------------------*/
+.modal-details {
+    width: 400px;
+    height: 80vh;
+    background-color: #dddcdca1;
+    justify-self: right;
+    position: absolute;
+    top: 25vh;
+}
+
+.container-modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-details {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    background-color: #ffffff;
+    height: 80px;
+}
+
+.title-details h3 {
+    margin-left: 20px;
+    color: #12B2BF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: .2px .2px .2px black;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.title-details button {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.description-details {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 30px;
+}
+
+.description-details-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-details img {
+    width: 60px;
+    height: 60px;
+}
+
+.info-details {
+    background-color: #ffffff;
 }

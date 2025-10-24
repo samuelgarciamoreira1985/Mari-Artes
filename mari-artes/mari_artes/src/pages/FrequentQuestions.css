@@ -1,0 +1,96 @@
+.container-frequentquestions {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-height: 74vh;
+}
+
+.frequentquestions-titledesc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 55vw;
+    align-self: center;
+}
+
+.frequentquestions-titledesc h3 {
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 1.7rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    text-shadow: .2px .2px .2px rgba(0, 0, 0, 0.507);
+    font-style: italic;
+}
+
+.frequentquestions-titledesc p {
+    color: black;
+    text-align: justify;
+}
+/*----------------PERGUNTAS E RESPOSTAS--------------*/
+
+.frequentquestions-response {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    max-width: 55vw;
+    align-self: center;
+    margin-bottom: 60px;
+}
+
+.question-response {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.question-response h4 {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.question-response p {
+    color: black;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+}
+
+.payment-money {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.payment-P {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.icon-payment {
+    font-size: 4rem;
+}
+
+.social-response {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+
+.social-response p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.icon-social {
+    font-size: 1rem;
+}

@@ -22,7 +22,7 @@ const Footer = () => {
               <h3>Informações</h3>
               <Link to="/about" className="link-info-footer">Quem somos</Link>
               <Link to="/guidebuy" className="link-info-footer">Como comprar</Link>
-              <Link to="#" className="link-info-footer">Perguntas Frequentes</Link>
+              <Link to="/frequentquestions" className="link-info-footer">Perguntas Frequentes</Link>
               <Link to="#" className="link-info-footer">As mais vendidas</Link>
           </div>
           <div className="contact-footer">

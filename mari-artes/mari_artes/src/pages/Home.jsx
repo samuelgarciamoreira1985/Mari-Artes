@@ -1,5 +1,5 @@
 //REACT
-import React from 'react'
+import Modal from "react-modal";
 import Footer from '../components/Footer/Footer.jsx' 
 //JSON
 import data_General from "../data/dataGeneral.json"
@@ -19,8 +19,19 @@ import keychain_top5 from "../assets/keychain-top5.png"
 import photoframe_top5 from "../assets/photoframe-top5.png"
 //ÍCONES
 import { TiArrowRightThick } from "react-icons/ti";
+import { useState } from "react";
 
 const Home = () => {
+
+  const [isOpenDetails,setIsOpenDetails] = useState("") // MODAL - DETALHES DOS PRODUTOS
+
+  const openModalDetails = () => {
+    setIsOpenDetails(true)
+  }
+
+  const closeModalDetails = () => {
+    setIsOpenDetails(false)
+  }
 
   return (
 
@@ -54,13 +65,46 @@ const Home = () => {
 
                 <div className='btn-finally-galery'>
                   <button type='button'>Adicionar ao carrinho</button>
-                  <button type='button'>Detalhes</button>
+                  <button type='button' onClick={openModalDetails}>Detalhes</button>
                 </div>
 
               </li>
             )) }
           </ul>
         </div>
+
+        <Modal
+        isOpen={isOpenDetails}
+        onRequestClose={closeModalDetails}
+        ariaHideApp={false}
+        className="modal-details"
+        >
+
+        <div className="container-modal-details">
+
+          <div className="title-details">
+              <h3>Detalhes do produto</h3>
+              <button type="button" onClick={closeModalDetails}>X</button>
+          </div>
+
+          <div className="description-details">
+              <img src={bracelet_top5} alt="foto do produto detalhado" />
+              <div className="description-details-info">
+                <p>Pulseira de cobre dourada</p>
+                <p>Pulseira de cobre dourada</p>
+                <p>R$ 20.90</p>
+              </div>
+          </div>
+
+          <div className="info-details">
+              <h4>DETALHES DO PRODUTO</h4>
+          </div>
+
+          <button type="button" onClick={closeModalDetails}>Sair</button>
+
+        </div>
+
+       </Modal>
 
       </div>
 
