@@ -328,7 +328,7 @@
 .modal-details {
     width: 400px;
     height: 80vh;
-    background-color: #dddcdca1;
+    background-color: #eeeeee;
     justify-self: right;
     position: absolute;
     top: 25vh;
@@ -338,6 +338,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 30px;
 }
 
 .title-details {
@@ -346,6 +347,7 @@
     gap: 80px;
     background-color: #ffffff;
     height: 80px;
+    border-radius: 10px;
 }
 
 .title-details h3 {
@@ -353,7 +355,7 @@
     color: #12B2BF;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: .2px .2px .2px black;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: italic;
 }
 
@@ -375,18 +377,64 @@
     flex-direction: row;
     padding: 10px;
     gap: 30px;
+    border-radius: 10px;
 }
 
 .description-details-info {
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
 .description-details img {
-    width: 60px;
-    height: 60px;
+    width: 350px;
+    height: 110px;
+    margin-left: 20px;
+}
+
+.description-details p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .info-details {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.info-details p {
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+    font-style: italic;
+}
+
+.btn-close-modal {
+    height: 40px;
+    width: 345px;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #12B2BF;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .5px .5px 2px black;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn-close-modal:hover {
+    background-color: #12b1bf98;
 }

@@ -20,13 +20,30 @@ import photoframe_top5 from "../assets/photoframe-top5.png"
 //ÍCONES
 import { TiArrowRightThick } from "react-icons/ti";
 import { useState } from "react";
+import { useViewTransitionState } from "react-router-dom";
 
 const Home = () => {
 
   const [isOpenDetails,setIsOpenDetails] = useState("") // MODAL - DETALHES DOS PRODUTOS
+  const [description,setDescription] = useState("")
+  const [value,setValue] = useState("")
+  const [photo,setPhoto] = useState("")
+  const [detail,setDetail] = useState("")
 
-  const openModalDetails = () => {
+  const checkValue = (valueSaleComm) => {
+    const decimalPart = valueSaleComm.toString().split(".")[1] || ''
+    const numberDecimal = decimalPart.length
+    if (numberDecimal === 1)
+    return numberDecimal + "0"    
+    }
+
+  const openModalDetails = (descriptionValue,valueValue,photoValue,detailValue) => {
+    setDescription(descriptionValue)
+    setValue(valueValue)
+    setPhoto(photoValue)
+    setDetail(detailValue)
     setIsOpenDetails(true)
+    //alert(descriptionValue)
   }
 
   const closeModalDetails = () => {
@@ -55,7 +72,7 @@ const Home = () => {
               <li key={itemProd.id_Product}>
                 <img src={itemProd.photo_Product} alt="imagem do produto" />
                 <p style={{marginTop:"20px"}}>{itemProd.description_Product}</p>
-                <p style={{marginTop:"20px",color:"#12B2BF",fontWeight:"600",fontSize:"1.5rem",textShadow:".2px .2px .5px black"}}>R$ {itemProd.value_Product}</p>
+                <p style={{marginTop:"20px",color:"#12B2BF",fontWeight:"600",fontSize:"1.5rem",textShadow:".2px .2px .5px black"}}>R$ {checkValue(itemProd.value_Product) ? itemProd.value_Product + "0" : itemProd.value_Product}</p>
                 
                 <div className='add-remove-cart'>
                   <button type='button'>+</button>
@@ -65,7 +82,7 @@ const Home = () => {
 
                 <div className='btn-finally-galery'>
                   <button type='button'>Adicionar ao carrinho</button>
-                  <button type='button' onClick={openModalDetails}>Detalhes</button>
+                  <button type='button' onClick={() => openModalDetails(itemProd.description_Product,itemProd.value_Product,itemProd.photo_Product,itemProd.detail_Product)}>Detalhes</button>
                 </div>
 
               </li>
@@ -88,19 +105,18 @@ const Home = () => {
           </div>
 
           <div className="description-details">
-              <img src={bracelet_top5} alt="foto do produto detalhado" />
+              <img src={photo} alt="foto do produto detalhado" />
               <div className="description-details-info">
-                <p>Pulseira de cobre dourada</p>
-                <p>Pulseira de cobre dourada</p>
-                <p>R$ 20.90</p>
+                <p>{description}</p>
+                <p style={{color:"red"}}>R$ {value}</p>
               </div>
           </div>
 
           <div className="info-details">
-              <h4>DETALHES DO PRODUTO</h4>
+              <p>{detail}</p>
           </div>
 
-          <button type="button" onClick={closeModalDetails}>Sair</button>
+          <button type="button" className="btn-close-modal" onClick={closeModalDetails}>FINALIZAR</button>
 
         </div>
 
