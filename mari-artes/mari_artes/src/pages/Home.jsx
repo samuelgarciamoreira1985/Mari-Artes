@@ -108,7 +108,7 @@ const Home = () => {
               <img src={photo} alt="foto do produto detalhado" />
               <div className="description-details-info">
                 <p>{description}</p>
-                <p style={{color:"red"}}>R$ {value}</p>
+                <p style={{color:"red"}}>R$ {checkValue(value) ? value + "0" : value}</p>
               </div>
           </div>
 

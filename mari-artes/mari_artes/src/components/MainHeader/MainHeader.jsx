@@ -35,10 +35,10 @@ const MainHeader = () => {
                 <span className="span-gift-cart">Como comprar</span>
             </div>
             <div className="cart-header">
-                <button className="btn-cart">
+                <Link to="/cartshopping"><button className="btn-cart">
                     <FaShoppingCart  className="icon-cart"/><RiCircleFill style={{color:"red",fontSize:"1.5rem"}}/>
                     <span className="amount-cart-home">00</span>
-                </button>
+                </button></Link>
                 <span className="span-gift-cart">Meu carrinho</span>
             </div>
         </div>

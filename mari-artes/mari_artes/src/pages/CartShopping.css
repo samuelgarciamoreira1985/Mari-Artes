@@ -1,0 +1,27 @@
+.container-cart-shopping {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-height: 74vh;
+}
+
+.title-cart-shopping {
+    align-self: center;
+    color: #12B2BF;
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 1.7rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    text-shadow: .2px .2px .2px #00000081;
+    font-style: italic;
+}
+
+.container-shopping-items-summary { /*ENGLOBA OS ÍTENS DO CARRINHO E O RESUMO - LADO A LADO*/
+    display: flex;
+    flex-direction: row;
+}
+
+.container-items-cart { /*ITENS DO CARRINHO*/
+
+}
