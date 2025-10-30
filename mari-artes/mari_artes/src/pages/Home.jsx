@@ -1,6 +1,10 @@
 //REACT
 import Modal from "react-modal";
 import Footer from '../components/Footer/Footer.jsx' 
+import { useState,useContext } from "react";
+import Swal from "sweetalert2"
+//CONTEXT
+import { CartShoppingContext } from "../context/CartContext.jsx"
 //JSON
 import data_General from "../data/dataGeneral.json"
 //CSS
@@ -19,7 +23,6 @@ import keychain_top5 from "../assets/keychain-top5.png"
 import photoframe_top5 from "../assets/photoframe-top5.png"
 //ÍCONES
 import { TiArrowRightThick } from "react-icons/ti";
-import { useState } from "react";
 import { useViewTransitionState } from "react-router-dom";
 
 const Home = () => {
@@ -29,6 +32,74 @@ const Home = () => {
   const [value,setValue] = useState("")
   const [photo,setPhoto] = useState("")
   const [detail,setDetail] = useState("")
+
+  const { cartItems,setCartItems,amountCart,setAmountCart,indexAmountCart,setIndexAmountCart,subTotalCart,setSubTotalCart,totalCart,setTotalCart } = useContext(CartShoppingContext)
+  const [idCountAmount,setIdCountAmount] = useState(0)
+
+  const addItemCartAmount = (idItem) => { // ADICIONA UMA UNIDADE DO PRODUTO
+    setIdCountAmount(idItem)
+    if (idItem === idCountAmount){
+        setAmountCart(amountCart+1)
+        console.log("items: " + amountCart)
+    }
+    else
+        setAmountCart(0)
+  }
+
+  const removeItemCartAmount = (idItemRemove) => { // REMOVE UMA UNIDADE DO PRODUTO
+    setIdCountAmount(idItemRemove)
+    if (idItemRemove === idCountAmount) {
+        if (amountCart === 0){
+          setAmountCart(0)
+        } else {
+          setAmountCart(amountCart-1)
+        }
+    } else 
+        setAmountCart(0)
+  }
+
+  const addItemCart = (idItemValue,photoItemValue,descriptionItemValue,amountItemValue,valueItemValue) => {
+    const newItem = {
+      "idItem": idItemValue,
+      "photoItem": photoItemValue,
+      "descriptionItem": descriptionItemValue,
+      "amountItem": amountItemValue,
+      "valueItem": valueItemValue
+    }
+
+    if (amountCart === 0){
+        Swal.fire({
+            closeOnClickOutside: false,
+            icon: "warning",
+            title: "ATENÇÃO!",
+            text: "Informe a quantidade desejada para adicionar o item no carrinho!"
+            }) 
+    } else {
+        const existisItem = cartItems.some(cartItems => cartItems.idItem === newItem.idItem)
+        if (existisItem) {
+          Swal.fire({
+            closeOnClickOutside: false,
+            icon: "warning",
+            title: "ATENÇÃO!",
+            text: "Esse item já consta no carrinho!"
+            }) 
+        } else {
+          setCartItems(prevItemns => [...prevItemns,newItem])
+          Swal.fire({
+            closeOnClickOutside: false,
+            icon: "success",
+            title: "PARABÉNS!",
+            text: "Ítem adicionado com sucesso!"
+            }) 
+            setIndexAmountCart(indexAmountCart+1)
+            // CALCULO - SUBTOTAL DOS ÍTENS DO CARRINHO DE COMPRAS
+            const calcItemAmount = valueItemValue * amountItemValue
+            setSubTotalCart(calcItemAmount + subTotalCart)
+            setTotalCart(calcItemAmount + totalCart)
+        }
+    }
+
+  }
 
   const checkValue = (valueSaleComm) => {
     const decimalPart = valueSaleComm.toString().split(".")[1] || ''
@@ -75,13 +146,13 @@ const Home = () => {
                 <p style={{marginTop:"20px",color:"#12B2BF",fontWeight:"600",fontSize:"1.5rem",textShadow:".2px .2px .5px black"}}>R$ {checkValue(itemProd.value_Product) ? itemProd.value_Product + "0" : itemProd.value_Product}</p>
                 
                 <div className='add-remove-cart'>
-                  <button type='button'>+</button>
-                  <span>1</span>
-                  <button type='button'>-</button>
+                  <button type='button' onClick={() => addItemCartAmount(itemProd.id_Product)}>+</button>
+                  <span>{itemProd.id_Product === idCountAmount ? amountCart : 0}</span>
+                  <button type='button' onClick={() => removeItemCartAmount(itemProd.id_Product)}>-</button>
                 </div>
 
                 <div className='btn-finally-galery'>
-                  <button type='button'>Adicionar ao carrinho</button>
+                  <button type='button' onClick={() => addItemCart(itemProd.id_Product,itemProd.photo_Product,itemProd.description_Product,amountCart,itemProd.value_Product)}>Adicionar ao carrinho</button>
                   <button type='button' onClick={() => openModalDetails(itemProd.description_Product,itemProd.value_Product,itemProd.photo_Product,itemProd.detail_Product)}>Detalhes</button>
                 </div>
 

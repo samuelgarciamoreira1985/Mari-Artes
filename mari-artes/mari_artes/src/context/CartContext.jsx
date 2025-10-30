@@ -4,39 +4,17 @@ export const CartShoppingContext = createContext()
 
 export const CartShoppingProvider = ({ children }) => {
 
-    const [cartItems,setCartItems] = useState([
-        {
-            "idItem":"1",
-            "photoItem":"/products-sale/bag2.png",
-            "descriptionItem":"Bolsa de tela preto carvão 19cm x 12cm (6cm profundidade)",
-            "amountItem": 1,
-            "valueItem": 24.99
-        },
-        {
-            "idItem":"2",
-            "photoItem":"/products-sale/bag3.png",
-            "descriptionItem":"Bolsa de tela marrom 23cm x 10cm (6cm profundidade)",
-            "amountItem": 2,
-            "valueItem": 22.99
-        },
-        {
-            "idItem":"3",
-            "photoItem":"/products-sale/bag4.png",
-            "descriptionItem":"Bolsa de tela preta 19cm x 12cm (6cm profundidade)",
-            "amountItem": 2,
-            "valueItem": 25.99
-        },
-        {
-            "idItem":"4",
-            "photoItem":"/products-sale/bag5.png",
-            "descriptionItem":"Bolsa de tela laranja 19cm x 12cm (6cm profundidade)",
-            "amountItem": 1,
-            "valueItem": 30.99
-        }
+    const [subTotalCart,setSubTotalCart] = useState(0) // SUBTOTAL DO VALOR DO CARRINHO DE COMPRAS
+    const [totalCart,setTotalCart] = useState(0) // TOTAL DO VALOR DO CARRINHO DE COMPRAS
+    const [dateSend,setDateSend] = useState("") // DATA DO SISTEMA
+    const [indexAmountCart,setIndexAmountCart] = useState(0) // ÍNDICE DE QUANTIDADE DE ÍTENS DO CARRINHO DE COMPRAS
+    const [amountCart,setAmountCart] = useState(0) // QUANTIDADE DE PRODUTO INDIVIDUAL NO CARRINHO DE COMPRAS
+    const [cartItems,setCartItems] = useState([ // OBJETO QUE CONTÉM O ÍTEM DO CARRINHO DE COMPRAS
+        
     ])
 
     return (
-        <CartShoppingContext.Provider value={{cartItems,setCartItems}}>
+        <CartShoppingContext.Provider value={{cartItems,setCartItems,amountCart,setAmountCart,indexAmountCart,setIndexAmountCart,dateSend,setDateSend,subTotalCart,setSubTotalCart,totalCart,setTotalCart}}>
             {children}
         </CartShoppingContext.Provider>
     )

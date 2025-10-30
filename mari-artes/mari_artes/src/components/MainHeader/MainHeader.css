@@ -145,4 +145,9 @@
     position: absolute;
     left: 52.1px;
     top: 28px;
+    background-color: #fc0000;
+    width: 19.5px;
+    height: 18px;
+    border-radius: 15px;
+    text-align: center;
 }

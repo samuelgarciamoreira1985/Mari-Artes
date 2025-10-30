@@ -1,15 +1,20 @@
 //REACT
 import { Link } from "react-router-dom"
+import { useContext } from "react";
 //ÍCONES
 import { FaSearch,FaGift,FaShoppingCart   } from "react-icons/fa";
 import { RiCircleFill } from "react-icons/ri";
 //CSS
 import "./MainHeader.css"
+//CONTEXT
+import { CartShoppingContext } from "../../context/CartContext.jsx"
 //IMAGENS
 import logo_mari from "../../assets/logo_mari.png"
 import logo_mari_finally from "../../assets/logo_mari_finally.png"
 
 const MainHeader = () => {
+
+    const { indexAmountCart } = useContext(CartShoppingContext)
 
   return (
 
@@ -36,8 +41,8 @@ const MainHeader = () => {
             </div>
             <div className="cart-header">
                 <Link to="/cartshopping"><button className="btn-cart">
-                    <FaShoppingCart  className="icon-cart"/><RiCircleFill style={{color:"red",fontSize:"1.5rem"}}/>
-                    <span className="amount-cart-home">00</span>
+                    <FaShoppingCart  className="icon-cart"/>
+                    <span className="amount-cart-home">{indexAmountCart}</span>
                 </button></Link>
                 <span className="span-gift-cart">Meu carrinho</span>
             </div>
