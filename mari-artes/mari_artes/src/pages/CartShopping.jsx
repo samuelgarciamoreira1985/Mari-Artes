@@ -14,7 +14,7 @@ import { FaCartArrowDown } from "react-icons/fa6";
 
 const CartShopping = () => {
 
-    const { cartItems,setCartItems,amountCart,dateSend,setDateSend,indexAmountCart,setIndexAmountCart,subTotalCart,setSubTotalCart,setTotalCart,totalCart } = useContext(CartShoppingContext)
+    const { cartItems,setCartItems,amountCart,setAmountCart,dateSend,setDateSend,indexAmountCart,setIndexAmountCart,subTotalCart,setSubTotalCart,setTotalCart,totalCart } = useContext(CartShoppingContext)
 
     // COLETA DE DATA DO SISTEMA...
     const dateSystemObj = new Date()
@@ -26,6 +26,38 @@ const CartShopping = () => {
     const numberDecimal = decimalPart.length
     if (numberDecimal === 1)
     return numberDecimal + "0"    
+    }
+
+    const roundNumber = (numberTotal,roundParam) => {
+        let numTotal = Math.pow(10, roundParam)
+        return Math.trunc(numberTotal * numTotal) / numTotal
+    }
+
+    const removeRoundItem = (idItemRemoveRound) => {
+        const itemValueRoundRemove = cartItems.find(itemRR => itemRR.idItem === idItemRemoveRound)
+        if (itemValueRoundRemove) {
+            const totalRemove = itemValueRoundRemove.valueItem * itemValueRoundRemove.amountItem
+            const calcTotalRemove = totalCart - totalRemove
+            const amountTotal = roundNumber(calcTotalRemove,2)
+            if (amountTotal <= 0){
+              setSubTotalCart(0)
+              setTotalCart(0)
+            }
+            else {
+              setSubTotalCart(amountTotal)  
+              setTotalCart(amountTotal)
+            }
+        }
+    }
+
+    const removeItemCart = (idItemRemove) => {
+        removeRoundItem(idItemRemove)
+        const newItemCart = cartItems.filter(itemF => itemF.idItem !== idItemRemove)
+        setCartItems(newItemCart)
+
+        // *****CALCULOS
+        setAmountCart(amountCart-1) // QUANTIDADE DE ITEMS
+        setIndexAmountCart(indexAmountCart-1) // ÍNDICE DE QUANTIDADE NO TOPO DO SITE
     }
 
     const clearCart = () => { // LIMPAR CARRINHO DE COMPRAS
@@ -83,7 +115,7 @@ const CartShopping = () => {
                         <p>x <span style={{fontSize:"1.2rem"}}>{item.amountItem}</span></p>
                         <div className='value-btn-cart'>
                           <p style={{color:"red",fontWeight:"600",fontSize:"1.3rem"}}>R$ {item.valueItem}</p>
-                          <button className='btn-remove-item-cart'><MdDelete className='icon-remove'/></button>
+                          <button className='btn-remove-item-cart' onClick={() => removeItemCart(item.idItem)}><MdDelete className='icon-remove'/></button>
                         </div>
                        </div>
                      </li>

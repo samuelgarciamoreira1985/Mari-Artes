@@ -33,7 +33,7 @@ const Footer = () => {
                <a href="https://www.facebook.com/profile.php?id=61576002713199&locale=pt_BR" className="link-facebook-footer" target="_blank">
                  <BsFacebook   style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com
                </a>
-               <Link to="#" className="link-contact-footer"><AiOutlineMail  style={{marginRight:"10px",fontSize:"1rem"}}/>marinhagarcia01@hotmail.com</Link>
+               <Link to="/contactemail" className="link-contact-footer"><AiOutlineMail  style={{marginRight:"10px",fontSize:"1rem"}}/>Enviar meu pedido</Link>
               <span>Rua Francisco Raimundo de Carvalho n° 5-62</span>
               <span style={{marginTop:"3px"}}>17065-209 - Bauru, SP </span>
           </div>

@@ -1,12 +1,16 @@
 //CSS
 import "./CartClear.css"
+//ÍCONES
+import { BsFillCartDashFill } from "react-icons/bs";
 
 const CartClear = () => {
 
   return (
 
-    <div>
-        <h3>O CARRINHO DE COMPRAS ESTÁ VAZIO!</h3>
+    <div className="container-info-cart">
+        <div className="msg-cart">
+          <span>O CARRINHO DE COMPRAS <BsFillCartDashFill /> ESTÁ VAZIO...</span>
+        </div>
     </div>
 
   )

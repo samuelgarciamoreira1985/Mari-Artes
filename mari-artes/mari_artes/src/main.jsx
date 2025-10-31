@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx'
 import FrequentQuestions from './pages/FrequentQuestions.jsx'
 import CartShopping from './pages/CartShopping.jsx'
 import GuideBuy from './pages/GuideBuy.jsx'
+import ContactEmail from './pages/ContactEmail.jsx'
 import Necklaces from './pages/Necklaces.jsx'
 import Bracelets from './pages/Bracelets.jsx'
 import Keychains from './pages/Keychains.jsx'
@@ -62,6 +63,10 @@ const routes = createBrowserRouter([
       {
         path: "/cartshopping", // PÁGINA - CARRINHO DE COMPRAS
         element: <CartShopping/>
+      },
+      {
+        path: "/contactemail", // PÁGINA - CONTATO-EMAIL
+        element: <ContactEmail/>
       }
     ]
   }
