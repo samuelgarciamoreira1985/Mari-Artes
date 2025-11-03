@@ -3,6 +3,7 @@ import Footer from '../components/Footer/Footer.jsx'
 import CartClear from '../components/CartClear/CartClear.jsx'
 import { useState,useContext } from 'react'
 import Swal from "sweetalert2"
+import jsPDF from "jspdf"
 //CONTEXT
 import { CartShoppingContext } from "../context/CartContext.jsx"
 //CSS
@@ -96,6 +97,71 @@ const CartShopping = () => {
 
     }
 
+    //GERAR PDF 
+    const generatorPDF = () => {
+      // **********INSTANCIAR A BIBLIOTECA PARA GERAR O PDF**************
+        const doc = new jsPDF()
+        const widthTitle = doc.internal.pageSize.getWidth()
+      // **********INÍCIO DO CONTEÚDO PDF**************
+        doc.setFontSize(16)
+        doc.text("MEU PEDIDO",widthTitle / 2,20, {align: 'center',fontWeight: "600"})
+
+        doc.setFontSize(14)
+        doc.text("ÍTENS",widthTitle / 2,40, {align: 'center'})
+
+        doc.setFontSize(12)
+        const imgItem = document.createElement('img')
+
+        {cartItems && cartItems?.map(itemPDF => {
+          doc.text(`Id: ${itemPDF.idItem}`,20,50)
+          imgItem.setAttribute('src',itemPDF.photoItem)
+          doc.addImage(imgItem,'PNG',20,55,50,50)
+          doc.text(`Descrição: ${itemPDF.descriptionItem}`,20,110)
+          doc.text(`x ${itemPDF.amountItem}`,20,115)
+          doc.text(`R$ ${itemPDF.valueItem}`,20,120)
+        })}
+
+        doc.setFontSize(14)
+        doc.text("RESUMO",widthTitle / 2,140, {align: 'center',fontWeight: "600"})
+
+        doc.setFontSize(12)
+        doc.text(`Subtotal R$: ${subTotalCart}`,20,155)
+        doc.text(`Quantidade: x ${indexAmountCart}`,20,162)
+        doc.text(`Data do pedido: ${dateSend}`,20,169)
+        doc.text(`Total R$: ${totalCart}`,20,176)
+      //***********FIM DO CONTEÚDO PDF ****************
+
+      //***********ATRIBUIR O NOME DO ARQUIVO E GERAR O PDF***********/
+        doc.save("MeuPedido.pdf")
+    } 
+
+    //FINALIZAR O PEDIDO
+    const finallyOrderPDF = () => {
+      Swal.fire({
+             title:"Deseja realmente finalizar o pedido?", 
+             icon: "question",
+             showCancelButton: true,
+             confirmButtonColor: "#30b5d6",
+             cancelButtonColor: "#d33",
+             cancelButtonText: "Cancelar",
+             confirmButtonText: "Confirmar"
+            })
+          .then((result => {
+            if (result.isConfirmed) {
+              Swal.fire({
+               closeOnClickOutside: false,
+               icon: "success",
+               title: "PARABÉNS",
+               text: "Seu pedido foi finalizado com sucesso e armazenado em um arquivo com a extênsão [*pdf]. Se você estiver utilizando o navegador de forma anônima você poderá selecionar um local para fazer o dowload do arquivo, caso contrário o dowload do arquivo será realizado automaticamente na sua pasta Dowloads.",
+               customClass: {
+                htmlContainer: 'swal-text-justificado' 
+                  }
+                })  
+                generatorPDF()
+              }
+          }))   
+    }
+
   return (
 
     <div className='container-cart-shopping'>
@@ -147,7 +213,7 @@ const CartShopping = () => {
                    </div>
                    <div className='summary-buttons'>
                      <button type='button' onClick={clearCart}><FaCartArrowDown /> Limpar o carrinho</button>
-                     <button type='button'><FaCheck /> Finalizar o pedido</button>
+                     <button type='button' onClick={finallyOrderPDF}><FaCheck /> Finalizar o pedido</button>
                    </div>
                  </div>
             </div>

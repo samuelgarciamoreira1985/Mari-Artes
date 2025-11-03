@@ -189,3 +189,7 @@
 .summary-buttons button:hover {
     background-color: #ef7b00a9;
 }
+
+.swal-text-justificado {
+    text-align: justify;
+}

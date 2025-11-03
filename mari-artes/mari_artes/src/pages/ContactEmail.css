@@ -1,0 +1,185 @@
+.container-email-order {
+    overflow-x: hidden;
+    max-height: 74vh;
+    display: flex;
+    flex-direction: column;
+}
+/**********************************/
+.title-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 40px;
+    width: 100vw;
+}
+.title-email h3 {
+    color: #12B2BF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: .2px .2px .2px black;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.title-email h4 {
+    color: #12B2BF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: .2px .2px .2px black;
+    font-size: 3rem;
+}
+/**********************************/
+
+.group-form-email-order {
+    margin-top: 50px;
+    width: 100vw;
+}
+
+.form-email-order {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 30px;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.lbl-name-email-order {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lbl-name-email-order span {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.lbl-name-email-order input {
+    width: 25vw;
+    height: 6vh;
+    border-radius: 12px;
+    background-color: #12b1bf54;
+    border: none;
+    font-size: 1rem;
+    text-indent: 10px;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+.lbl-name-email-order input:focus {
+    outline: none;
+}
+/**********************************/
+
+.subject-msg-attachment {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.lbl-subject-msg-attachment-order {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lbl-subject-msg-attachment-order span {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.lbl-subject-msg-attachment-order input {
+    width: 51.7vw;
+    height: 6vh;
+    border-radius: 12px;
+    background-color: #12b1bf54;
+    border: none;
+    font-size: 1rem;
+    text-indent: 10px;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+.lbl-subject-msg-attachment-order input:focus {
+    outline: none;
+}
+
+#txt-area-msg {
+    width: 51.7vw;
+    height: 15vh;
+    border-radius: 12px;
+    background-color: #12b1bf54;
+    border: none;
+    font-size: 1rem;
+    text-indent: 10px;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+#txt-area-msg:focus {
+    outline: none;
+}
+
+.btn-attachment {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #12B2BF;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    text-shadow: .5px .5px .5px black;
+    cursor: pointer;
+}
+
+.btn-attachment:hover {
+    background-color: #12b1bfbe;
+}
+
+.group-btn-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.group-btn-info span {
+    font-size: .9rem;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/**********************************/
+
+.group-btn-send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.btn-send-email-order {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #12B2BF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    text-shadow: .5px .5px .5px black;
+    cursor: pointer;
+}
+
+.btn-send-email-order:hover {
+    background-color: #12b1bfbe;
+}
