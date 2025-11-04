@@ -107,28 +107,47 @@ const CartShopping = () => {
         doc.text("MEU PEDIDO",widthTitle / 2,20, {align: 'center',fontWeight: "600"})
 
         doc.setFontSize(14)
-        doc.text("ÍTENS",widthTitle / 2,40, {align: 'center'})
+        doc.text("ÍTENS",widthTitle / 2,35, {align: 'center'})
 
         doc.setFontSize(12)
+        let yPositionId = 90
+        let yPositionImage = 50
+        let yPositionDescription = 48
+        let yPositionAmount = 95
+        let yPositionValue = 100
         const imgItem = document.createElement('img')
 
         {cartItems && cartItems?.map(itemPDF => {
-          doc.text(`Id: ${itemPDF.idItem}`,20,50)
+          doc.text(`Id: ${itemPDF.idItem}`,80,yPositionId)
+          yPositionId +=65
           imgItem.setAttribute('src',itemPDF.photoItem)
-          doc.addImage(imgItem,'PNG',20,55,50,50)
-          doc.text(`Descrição: ${itemPDF.descriptionItem}`,20,110)
-          doc.text(`x ${itemPDF.amountItem}`,20,115)
-          doc.text(`R$ ${itemPDF.valueItem}`,20,120)
+          doc.addImage(imgItem,'PNG',20,yPositionImage,50,50)
+          yPositionImage +=65 
+          doc.text(`${itemPDF.descriptionItem}`,20,yPositionDescription)
+          yPositionDescription +=65
+          doc.text(`x ${itemPDF.amountItem}`,80,yPositionAmount)
+          yPositionAmount +=65
+          doc.text(`R$ ${itemPDF.valueItem}`,80,yPositionValue)
+          yPositionValue +=65
+
+          if (yPositionValue > doc.internal.pageSize.getHeight() - 20) {
+              doc.addPage();
+               yPositionId = 62
+               yPositionImage = 22
+               yPositionDescription = 20
+               yPositionAmount = 67
+               yPositionValue = 72
+             }
         })}
 
         doc.setFontSize(14)
-        doc.text("RESUMO",widthTitle / 2,140, {align: 'center',fontWeight: "600"})
+        doc.text("RESUMO",20,yPositionValue-45)
 
         doc.setFontSize(12)
-        doc.text(`Subtotal R$: ${subTotalCart}`,20,155)
-        doc.text(`Quantidade: x ${indexAmountCart}`,20,162)
-        doc.text(`Data do pedido: ${dateSend}`,20,169)
-        doc.text(`Total R$: ${totalCart}`,20,176)
+        doc.text(`Subtotal: R$ ${subTotalCart}`,20,yPositionValue-35)
+        doc.text(`Quantidade: x ${indexAmountCart}`,20,yPositionValue-28)
+        doc.text(`Data do pedido: ${dateSend}`,20,yPositionValue-21)
+        doc.text(`Total: R$ ${totalCart}`,20,yPositionValue-14)
       //***********FIM DO CONTEÚDO PDF ****************
 
       //***********ATRIBUIR O NOME DO ARQUIVO E GERAR O PDF***********/
