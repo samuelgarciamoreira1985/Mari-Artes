@@ -30,6 +30,10 @@
 
 .container-header input::placeholder { color: #12b1bfc5; font-weight: 600; font-size: .9rem;}
 
+.container-header input:focus {
+    outline: none;
+}
+
 .btn-search-header {
     position: absolute;
     left: 1010px;

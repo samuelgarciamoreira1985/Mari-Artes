@@ -59,7 +59,7 @@ const FrequentQuestions = () => {
 
             <div className='question-response'>
                 <h4>O que devo fazer caso meu produto não chegue em bom estado?</h4>
-                <p>* Você pode entrar em contato conosco através de nossos meios de comunicação.</p>
+                <p>* Você pode entrar em contato conosco através de nossos canais de comunicação.</p>
                 <div className='social-response'>
                     <p><BsWhatsapp className='icon-social'/> (14) 98818-3530</p>
                     <p><FaPhoneFlip className='icon-social'/> (14) 98818-3530</p>

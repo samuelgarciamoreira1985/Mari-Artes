@@ -42,7 +42,7 @@ const ContactEmail = () => {
     <div className='container-email-order'>
 
         <div className='title-email'>
-          <h3>Fale conosco ou envie seu pedido...</h3>
+          <h3>Fale conosco...</h3>
           <h4>Contato</h4>
         </div>
 
@@ -86,15 +86,6 @@ const ContactEmail = () => {
                 required
                 >
                 </textarea>
-              </label>
-              <label className='lbl-subject-msg-attachment-order'>
-                <span>Anexos</span>
-                <input type="text"
-                />
-                <div className='group-btn-info'>
-                  <button type='button' className='btn-attachment'>Adicione o arquivo</button>
-                  <span>*Clique no botão ao lado e selecione o arquivo para enviar...</span>
-                </div>
               </label>
             </div>
 
