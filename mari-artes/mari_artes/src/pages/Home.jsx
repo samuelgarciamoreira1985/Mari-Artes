@@ -5,6 +5,7 @@ import { useState,useContext } from "react";
 import Swal from "sweetalert2"
 //CONTEXT
 import { CartShoppingContext } from "../context/CartContext.jsx"
+import { OthersFeaturesContext } from "../context/OthersContext.jsx"
 //JSON
 import data_General from "../data/dataGeneral.json"
 //CSS
@@ -34,6 +35,7 @@ const Home = () => {
   const [detail,setDetail] = useState("")
 
   const { cartItems,setCartItems,amountCart,setAmountCart,indexAmountCart,setIndexAmountCart,subTotalCart,setSubTotalCart,totalCart,setTotalCart } = useContext(CartShoppingContext)
+  const { searchInputValue,sectionSearchRef } = useContext(OthersFeaturesContext)
   const [idCountAmount,setIdCountAmount] = useState(0)
 
   const addItemCartAmount = (idItem) => { // ADICIONA UMA UNIDADE DO PRODUTO
@@ -137,7 +139,7 @@ const Home = () => {
 
         <h3>Galeria Artesanal 2025</h3>
 
-        <div className='container-gallery'>
+        <div className='container-gallery' ref={ searchInputValue === "bolsa" ? sectionSearchRef : null}>
           <ul>
             { data_General && data_General?.map( itemProd => (
               <li key={itemProd.id_Product}>

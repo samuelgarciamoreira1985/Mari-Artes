@@ -18,6 +18,7 @@ import PhotoFrame from './pages/PhotoFrame.jsx'
 import About from './pages/About.jsx'
 // CONTEXT
 import { CartShoppingProvider } from "./context/CartContext.jsx"
+import { OthersFeaturesProvider } from "./context/OthersContext.jsx"
 
 const routes = createBrowserRouter([
   {
@@ -74,8 +75,10 @@ const routes = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <OthersFeaturesProvider>
     <CartShoppingProvider>
     <RouterProvider router={routes}/>
     </CartShoppingProvider>
+    </OthersFeaturesProvider>
   </StrictMode>,
 )

@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import Swal from "sweetalert2"
 //CONTEXT
 import { CartShoppingContext } from "../context/CartContext.jsx"
+import { OthersFeaturesContext } from "../context/OthersContext.jsx"
 //JSON
 import data_Bags from "../data/dataBags.json"
 //CSS
@@ -21,6 +22,7 @@ const Bags = () => {
     const [detail,setDetail] = useState("")
 
     const { cartItems,setCartItems,amountCart,setAmountCart,indexAmountCart,setIndexAmountCart,subTotalCart,setSubTotalCart,totalCart,setTotalCart } = useContext(CartShoppingContext)
+    const { searchInputValue,sectionSearchRef } = useContext(OthersFeaturesContext)
     const [idCountAmount,setIdCountAmount] = useState(0)
 
     const addItemCartAmount = (idItem) => { // ADICIONA UMA UNIDADE DO PRODUTO
@@ -121,7 +123,7 @@ const Bags = () => {
 
         <h3>Galeria de Bolsas 2025</h3>
 
-        <div className='container-galery-bags'>
+        <div className='container-galery-bags' ref={ searchInputValue === "bolsa" ? sectionSearchRef : null}>
           <ul>
               { data_Bags && data_Bags?.map( itemBag => (
                 <li key={itemBag.id_Bag}>

@@ -2,7 +2,7 @@ import { useState,useRef,createContext } from "react";
 
 export const OthersFeaturesContext = createContext()
 
-const OthersFeaturesProvider = ({ children }) => {
+export const OthersFeaturesProvider = ({ children }) => {
 
     const [searchInputValue,setSearchInputValue] = useState("")
     const sectionSearchRef = useRef(null)
